@@ -6746,7 +6746,7 @@ data.forEach(item => {
 });
 
 clearListButton.addEventListener('click', function () {
-  localStorage.removeItem('items');
+  localStorage.setItem('items', JSON.stringify([]));
 });
 
 clearUserTokenButton.addEventListener('click', function () {
