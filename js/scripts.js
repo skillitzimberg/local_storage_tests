@@ -6747,6 +6747,10 @@ data.forEach(item => {
 
 clearListButton.addEventListener('click', function () {
   localStorage.setItem('items', JSON.stringify([]));
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+  itemsArray = [];
 });
 
 clearUserTokenButton.addEventListener('click', function () {
